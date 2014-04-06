@@ -44,9 +44,7 @@ Olgu $\{Y_t\}_{t\geq1}$ Markovi ahel sesundite hulgaga $S = \{1,2,\dots,K\}$, $K
 	Juhuslike protsesside paarile $(X, Y)$ viidatakse ka kui \textit{varjatud Markovi mudelile}.
 \end{definition}
 
-Teisisõnu võib varjatud Markovi ahelat kirjeldada järgneva skeemina:
-
-\setcounter{figure}{0}
+Varjatud Markovi ahela mõistet võib kujutada ka järgneva skeemiga:
 
 \begin{figure}[h]
 	\centering
@@ -55,4 +53,49 @@ Teisisõnu võib varjatud Markovi ahelat kirjeldada järgneva skeemina:
 	\label{fig:HMM}
 \end{figure}
 
-Joonisel \ref{fig:HMM} kasti sees olev osa on meile üldjuhul vaadeldamatu ja sealt tuleb varjatud Markovi ahelatele ka nimi.
+Joonisel~\ref{fig:HMM} ristküliku sees olev osa on meile üldjuhul vaadeldamatu ja sealt tuleb varjatud Markovi ahelatele ka nimi.
+
+%LEHE BLACK IPA
+
+\begin{example}[Personaalne robot]
+Olgu meile ülesandeks õpetada robotile inimeste emotsioonide mõistmist. Meil ei ole tehnilisi vahendeid, et emotsioone mõõta, küll aga oskame masinale õpetada ära tundma mõnda tegevust, mida tema omanik teha võiks.
+Selles näites on roboti omaniku emotsionaalne seisund varjatud Markovi ahela vaadeldamatu osa $\{Y_t\}_{t\geq1}$. Lihtsustame selle kahele seisundile ning määrame ühest teise seisundisse minemise tõenäosused tabelis~\ref{fig:HMM.ex.transition}.
+
+\begin{table}[h]
+	\centering
+
+	\begin{tabular}{ r | c c }	
+						& kurb & õnnelik \\
+		\hline
+		kurb    & 0,6  & 0,4     \\
+		õnnelik & 0,05 & 0,95    \\
+
+	\end{tabular}
+
+	\caption{Üleminekutõenäosused.}
+	\label{fig:HMM.ex.transition}
+\end{table}
+
+See tähendab, et mingi aja, näiteks tunni lõikes, jääb omaniku tuju kurvaks tõenäosusega 0,6 eeldusel, et see oli eelmine tund kurb, ning muutub õnnelikuks tõenäosusega 0,4.
+Nüüd fikseerime vaadeldava osa $\{X_t\}_{t\geq1}$. Oletame, et meie robot oskab vahet teha nelja tegevuse vahel. Olgu nendeks aja veetmine sotsiaalvõrgustikus(SV), sportimine, päris inimesega suhtlemine(sots.) ja nutmine. Vaatluste tõenäosused toome välja tabelis~\ref{fig:HMM.ex.emission}.
+
+\begin{table}[h]
+	\centering
+
+	\begin{tabular}{ r | *{4}{c} }	
+						& SV 	& sport & sots. & nutt\\
+		\hline
+			 kurb & 0,3 & 0,15	 & 0,05 & 0,5 \\
+		õnnelik & 0,2	& 0,2   & 0,5	& 0,1 \\
+	\end{tabular}
+
+	\caption{Emissioonitõenäosused.}
+	\label{fig:HMM.ex.emission}
+\end{table}
+
+Paneme tähele, et kuna vaatluste jaotused määrab emotsionaalse seisund summeeruvad just read üheks. Nii ei suuda roboti omanik kurb olles 50\% tõenäosusega teha muud kui nutta, ning õnnelikuna tahab ta keskmiselt poole ajast teistega suhelda.
+
+\subsection{Kolm klassikalist probleemi}
+
+
+\end{example}
