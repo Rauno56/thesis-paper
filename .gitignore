@@ -1,1 +1,11 @@
 dist
+figures
+docs
+*.out
+*.aux
+*.log
+*.dvi
+*.toc
+*.blg
+*.bbl
+*.tdo
