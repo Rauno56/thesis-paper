@@ -1,53 +1,63 @@
 \documentclass[12pt]{article}
-\hfuzz
+
+%kasutan
+
+%eestikeeleasjad?
+\usepackage[utf8]{inputenc}
+%\usepackage[estonian, english]{babel} %mainlanguage should be english & chance to estonian if needed...
+%\usepackage[T1]{fontenc} % täpitähed
+
+
+%mataspetsiifika ja sümbolid
+\usepackage{amsmath} %ftp://ftp.ams.org/ams/doc/amsmath/short-math-guide.pdf
+
+%teoreemide ja definitsioonide boiler
+\usepackage{amsthm}
+
+
+\def \thesisTitle {Riskipõhine segmenteerimine peidetud Markovi ahelatega}
+
+%todode spetsiifika, just in case
+\usepackage{todonotes}
+\newcommand{\TODO}{\todo[inline]}
+
+\usepackage[round]{natbib}
+\usepackage[pdftex, pdfborderstyle={/S/U/W 0}]{hyperref} % this disables the boxes around links
+
+\usepackage{amssymb}
+
+%eiteaetkasutaks aga ära ka ei saa võtta
+
 
 \usepackage{array}
 
 
-% General packages for math and document geometry
-\usepackage{geometry}
-\usepackage{amsmath} %ftp://ftp.ams.org/ams/doc/amsmath/short-math-guide.pdf
- \numberwithin{equation}{section}
-\usepackage{amsthm}
-\usepackage{amssymb}
+
+%eiteaetkasutaks
+
+% % General packages for math and document geometry
+% \usepackage{geometry}
+%  \numberwithin{equation}{section}
 
 
-\usepackage[utf8]{inputenc}
-\usepackage[estonian, english]{babel} %mainlanguage should be english & chance to estonian if needed...
-\usepackage[T1]{fontenc} % täpitähed
 
-\geometry{a4paper}
+% \geometry{a4paper}
 
-\usepackage{tikz}
-\usetikzlibrary{matrix}
+% \usepackage{tikz}
+% \usetikzlibrary{matrix}
 
-\usepackage{tabu} %wide lines in tables
+% \usepackage{tabu} %wide lines in tables
 
-\usepackage{graphicx}
-\usepackage{xspace}
+% \usepackage{graphicx}
+% \usepackage{xspace}
 
-\graphicspath{{figures/}}
+% \graphicspath{{figures/}}
 
-%%%% code printing
-\usepackage{listings}
-\usepackage{color}
+% %%%% code printing
+% \usepackage{listings}
+% \usepackage{color}
 
-\usepackage[round]{natbib}
+% \usepackage[all]{hypcap}
 
-\usepackage[ruled, vlined, linesnumbered]{algorithm2e}
-\usepackage{proof} % http://logicmatters.net/resources/ndexamples/proofsty3.html <= writing type rules => use semantic::inference
-\setlength{\inferLineSkip}{4pt}
-\usepackage{semantic} %ftp://tug.ctan.org/tex-archive/macros/latex/contrib/semantic/semantic.pdf
-\def\predicatebegin #1\predicateend{$\Gamma \vdash #1$}
+% \newcommand{\tab}{\hspace*{2em}}
 
-
-\usepackage{todonotes}
-\usepackage{hyperref}
-\usepackage[all]{hypcap}
-
-\newcommand{\tab}{\hspace*{2em}}
-\newcommand{\TODO}{\todo[inline]}
-
-\newenvironment{loba}
-
-\def \thesisTitle {Segmenteerimine peidetud Markovi ahelatega}
