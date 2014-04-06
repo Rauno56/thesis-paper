@@ -32,9 +32,27 @@ Markovi ahela $\{Y_t\}_{t\geq1}$ indeksit $t$ nimetatakse mõnikord ka ajaks võ
 
 Olgu $\{Y_t\}_{t\geq1}$ Markovi ahel sesundite hulgaga $S = \{1,2,\dots,K\}$, $K>1$ ja algjaotusega $P(Y_1=s)$, $s \in S$. Kuigi arvestame töös ka mittehomogeensete ahelatega, jätame lihtsuse huvides aega tähistava indeksi ära, kui see ei tekita segadust. Seega tähistame kõiki üleminekumaatrikseid $\mathbb{P} = (p_{ij})_{i,j \in S}$.
 
-Olgu $X = \{Y_t\}_{t\geq1}$ järgnevate omadustega:
 
-\begin{enumerate}
-  \item $Y$ korral, juhuslikud suurused $X$ on omavahel sõltumatud,
-  \item iga $t = 1,2,\dots$, korral on $X_t$ sõltuv juhuslikust protsessist $\{Y_t\}_{t\geq1}$ (ja ajast $t$) ainult läbi $Y_t$
-\end{enumerate}
+\begin{definition}[Varjatud Markovi ahel]~\citep{lember10}
+	Protsessi $X = \{Y_t\}_{t\geq1}$ nimetatakse varjatud Markovi ahelaks kui kehtib:
+
+	\begin{enumerate}
+		\item $\{Y_t\}_{t\geq1}$ korral, juhuslikud suurused $\{X_t\}_{t\geq1}$ on omavahel sõltumatud;
+		\item iga $t = 1,2,\dots$, korral on $X_t$ sõltuv juhuslikust protsessist $\{Y_t\}_{t\geq1}$ (ja ajast $t$) ainult läbi $Y_t$.
+	\end{enumerate}
+
+	Juhuslike protsesside paarile $(X, Y)$ viidatakse ka kui \textit{varjatud Markovi mudelile}.
+\end{definition}
+
+Teisisõnu võib varjatud Markovi ahelat kirjeldada järgneva skeemina:
+
+\setcounter{figure}{0}
+
+\begin{figure}[h]
+	\centering
+	\input{markovidef.fig}
+	\caption{Varjatud Markovi ahela kuju.}
+	\label{fig:HMM}
+\end{figure}
+
+Joonisel \ref{fig:HMM} kasti sees olev osa on meile üldjuhul vaadeldamatu ja sealt tuleb varjatud Markovi ahelatele ka nimi.

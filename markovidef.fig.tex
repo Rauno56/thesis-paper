@@ -1,0 +1,34 @@
+\begin{tikzpicture}[
+		->,
+		>=stealth',
+		shorten >=1pt,
+		auto,
+		node distance=2cm,
+		main node/.style={inner sep=0cm,circle,minimum width=1cm,fill=white,draw,font=\small}]
+
+	\node[main node] (y1) {\dots};
+	
+	\node[main node] (y2) [right of=y1] {$Y_{k-1}$};
+	\node[main node] (x2) [below of=y2] {$X_{k-1}$};
+	
+	\node[main node] (y3) [right of=y2] {$Y_{k}$};
+	\node[main node] (x3) [below of=y3] {$X_{k}$};
+	
+	\node[main node] (y4) [right of=y3] {$Y_{k+1}$};
+	\node[main node] (x4) [below of=y4] {$X_{k+1}$};
+	
+	\node[main node] (y5) [right of=y4] {\dots};
+	
+	\node[rectangle, inner sep=2mm,draw=black!100, fit=(y1) (y2) (y3) (y4) (y5)] {};
+
+	\path
+		(y1) edge node {} (y2)
+		(y2) edge node {} (y3)
+		(y3) edge node {} (y4)
+		(y4) edge node {} (y5)
+		
+		(y2) edge node {} (x2)
+		(y3) edge node {} (x3)
+		(y4) edge node {} (x4)
+	;
+\end{tikzpicture}
