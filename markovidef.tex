@@ -1,0 +1,40 @@
+% Vajame tabelit ja joonist
+
+\section{Varjatud Markovi ahel} 
+
+\subsection{Markovi ahel}
+
+Juhuslike suuruste jada $\{Y_t\}_{t\geq1}$, mis võtab väärtusi hulgal S, nimetatakse diskreetseks juhuslikuks protsessiks seisundiruumiga S. Käesolevas töös vaa\-ta\-me vaid olukorda, kus S on lõplik. Lihtsuse huvides võime S elemente tähistada ka naturaalarvudega: $S = \{1,2,\dots,K\}$, kus $K = |S|$ on elementide arv.~\citep{raag,bremaud}
+
+\begin{definition}~\citep{raag,bremaud}
+Diskreetset juhuslikku protsessi $\{Y_t\}_{t\geq1}$ lõpliku seisundiruumiga S nimetatakse Markovi ahelaks, kui iga $t\geq1$ ning $s_1,\dots,s_{t-1},i,j \in S$ korral
+
+\begin{equation*} \label{eq:markovchain}
+P(Y_{t+1}=j | Y_{t}=i, Y_{t-1}=s_{t-1}, \dots, Y_{1}=s_{1}) = P(Y_{t+1}=j | Y_{t}=i).
+\end{equation*}
+
+\end{definition}
+
+Tõenäosusi $P(Y_{t+1}=j | Y_{t}=i)$ nimetatakse üleminukutõenäosusteks ole\-kust $i$ olekusse $j$ ja vastavat maatriksit $P_t := (p_t(i,j))$, kus
+
+\begin{equation*}
+p_t(i,j) := P(Y_{t+1}=j | Y_{t}=i),
+\end{equation*}
+
+üleminekutõenäosuste maatriksiks või üleminekumaatriksiks. Jaotust \\ $p_1(s) := P(Y_1=s)$ nimetatakse algjaotuseks.
+
+Markovi ahela $\{Y_t\}_{t\geq1}$ indeksit $t$ nimetatakse mõnikord ka ajaks või hetkeks, kahe hetke vahet nimetatakse sammudeks või sammude arvuks.~\citep{raag}
+
+\subsection{Varjatud Markovi ahel}
+
+\TODO{Defineeri homogeenne Markovi ahel}
+\TODO{Kas töö käsitleb ainult homogeenseid varjatud Markovi ahelaid või mitte? Millisel moel?}
+
+Olgu $\{Y_t\}_{t\geq1}$ Markovi ahel sesundite hulgaga $S = \{1,2,\dots,K\}$, $K>1$ ja algjaotusega $P(Y_1=s)$, $s \in S$. Kuigi arvestame töös ka mittehomogeensete ahelatega, jätame lihtsuse huvides aega tähistava indeksi ära, kui see ei tekita segadust. Seega tähistame kõiki üleminekumaatrikseid $\mathbb{P} = (p_{ij})_{i,j \in S}$.
+
+Olgu $X = \{Y_t\}_{t\geq1}$ järgnevate omadustega:
+
+\begin{enumerate}
+  \item $Y$ korral, juhuslikud suurused $X$ on omavahel sõltumatud,
+  \item iga $t = 1,2,\dots$, korral on $X_t$ sõltuv juhuslikust protsessist $\{Y_t\}_{t\geq1}$ (ja ajast $t$) ainult läbi $Y_t$
+\end{enumerate}
